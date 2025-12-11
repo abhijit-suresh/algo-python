@@ -1,0 +1,2 @@
+# No external dependencies required for algo-python
+# All scripts use only the Python standard library

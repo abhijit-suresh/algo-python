@@ -5,7 +5,7 @@ class Solution:
         left, right = 0, len(height) - 1
         while left < right:
             x = right - left
-            y =  min(height[right],  height[left])
+            y = min(height[right], height[left])
             area = x * y
             max_water = max(max_water, area)
             if height[left] < height[right]:
@@ -14,7 +14,5 @@ class Solution:
                 right -= 1
             else:
                 right -= 1
-                left += 1 
+                left += 1
         return max_water
-            
-        

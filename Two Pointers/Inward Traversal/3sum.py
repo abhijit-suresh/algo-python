@@ -1,6 +1,7 @@
 # https://leetcode.com/problems/3sum/description/
 ## Inward Traversal
 
+
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         triplets = []
@@ -8,17 +9,17 @@ class Solution:
         for i in range(len(nums)):
             if nums[i] > 0:
                 break
-            
-            if i > 0 and nums[i] == nums[i-1]:
+
+            if i > 0 and nums[i] == nums[i - 1]:
                 continue
 
-            pairs = self.pair_sum_sorted(nums, i+1, -nums[i])
+            pairs = self.pair_sum_sorted(nums, i + 1, -nums[i])
             for pair in pairs:
                 triplets.append([nums[i]] + pair)
-        
+
         return triplets
-    
-    def pair_sum_sorted(self,nums, start, target):
+
+    def pair_sum_sorted(self, nums, start, target):
         pairs = []
         left, right = start, len(nums) - 1
         while left < right:
